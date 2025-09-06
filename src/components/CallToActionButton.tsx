@@ -11,6 +11,7 @@ const CallToActionButton = ({
   
   const variants = {
     primary: "bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600 shadow-lg hover:shadow-xl",
+    secondary: "bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm",
     outline: "border border-white/30 text-white hover:bg-white/10 backdrop-blur-sm",
   };
 
