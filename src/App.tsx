@@ -8,7 +8,7 @@ import CallToActionButton from './components/CallToActionButton';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useLocation } from './hooks/useLocation';
 import { useVendors } from './hooks/useVendors';
-import { useUserStore, useAppStore } from './store';
+import { useUserStore } from './store';
 import { stripeService } from './services/stripe';
 import { openAIService } from './services/openai';
 
@@ -254,8 +254,8 @@ function App() {
                 </div>
                 <FilterTags
                   onFilterChange={handleFilterChange}
-                  selectedFilters={[...activeFilters.dietaryTags, ...activeFilters.cuisineTypes]}
-                  availableOptions={[...availableDietaryTags, ...availableCuisineTypes]}
+                  selectedFilters={[...activeFilters.dietaryTags, ...activeFilters.cuisineTypes] as string[]}
+                  availableOptions={[...availableDietaryTags, ...availableCuisineTypes] as string[]}
                 />
               </div>
 
